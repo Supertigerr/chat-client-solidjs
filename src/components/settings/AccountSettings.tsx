@@ -347,6 +347,25 @@ const bioBlockStyles = css`
   }
 `;
 
+const pronounBlockStyles = css`
+  && {
+    height: initial;
+    min-height: initial;
+    align-items: start;
+    flex-direction: column;
+    flex: 0;
+    padding-top: 15px;
+    align-items: stretch;
+  }
+  .inputContainer {
+    margin-left: 35px;
+    margin-top: 5px;
+  }
+  textarea {
+    height: 100px;
+  }
+`
+
 function EditProfilePage() {
   const { account } = useStore();
   const [userDetails, setUserDetails] = createSignal<UserDetails | null>(null);
@@ -355,6 +374,7 @@ function EditProfilePage() {
 
   const defaultInput = () => ({
     bio: userDetails()?.profile?.bio || '',
+    pronouns: userDetails()?.profile?.pronouns || '',
   })
 
   const [inputValues, updatedInputValues, setInputValue] = createUpdatedSignal(defaultInput);
@@ -371,11 +391,22 @@ function EditProfilePage() {
     setRequestSent(true);
     setError(null);
     const values = updatedInputValues();
+    values.bio = values.bio ?? userDetails()?.profile?.bio;
+    values.pronouns = values.pronouns ?? userDetails()?.profile?.pronouns;
     await updateUser({
-      bio: values.bio?.trim() || null
+      bio: values.bio?.trim() || null,
+      pronouns: values.pronouns?.trim() || null
     })
       .then(() => {
-        setUserDetails(() => ({ ...userDetails()!, profile: { bio: values.bio } }))
+        setUserDetails(() => (
+          {
+            ...userDetails()!,
+            profile: { 
+              bio: values.bio,
+              pronouns: values.pronouns
+            }
+          }
+        ))
       })
       .catch(err => {
         setError(err.message)
@@ -389,6 +420,20 @@ function EditProfilePage() {
         <Text size={12} style={{ "margin-left": "38px", "margin-top": "5px" }}>({inputValues().bio.length} / 1000)</Text>
         <Input class='inputContainer' type='textarea' value={inputValues().bio} onText={(v) => setInputValue('bio', v)} />
       </SettingsBlock>
+
+      <SettingsBlock icon='face' label='Pronouns' class={pronounBlockStyles} description='Either select or use a custom one'>
+        <Text size={12} style={{ "margin-left": "38px", "margin-top": "5px" }}></Text>
+        <div  style={{ "margin-left": "38px", "display": 'flex' }}>
+          <Button label="he/him" onClick={() => setInputValue('pronouns', 'he/him')} />
+          <Button label="she/her" onClick={() => setInputValue('pronouns', 'she/her')} />
+          <Button label="they/them" onClick={() => setInputValue('pronouns', 'they/them')} />
+          <Button label="Rather not say" onClick={() => setInputValue('pronouns', 'Rather not say')} />
+        </div>
+        <a></a>
+        <Text size={12} style={{ "margin-left": "38px", "margin-top": "5px" }}>({inputValues().pronouns.length} / 16)</Text>
+        <Input class='inputContainer' type='textarea' value={inputValues().pronouns} onText={(v) => setInputValue('pronouns', v)} />
+      </SettingsBlock>
+
       <Show when={error()}><Text size={12} color="var(--alert-color)" style={{ "margin-top": "5px" }}>{error()}</Text></Show>
       <Show when={Object.keys(updatedInputValues()).length}>
         <Button iconName='save' label={requestStatus()} class={css`align-self: flex-end;`} onClick={onSaveButtonClicked} />

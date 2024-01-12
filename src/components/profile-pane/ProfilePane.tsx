@@ -168,6 +168,11 @@ export default function ProfilePane() {
                   <span class={styles.username}>{user()!.username}</span>
                   <span class={styles.tag}>{`:${user()!.tag}`}</span>
                 </div>
+                <div>
+                  <span class={styles.pronouns}>
+                    {userDetails()?.profile.pronouns ? userDetails().profile.pronouns : 'Rather not say'}
+                  </span>
+                </div>
                 <UserPresence
                   hideActivity
                   animate

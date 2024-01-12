@@ -112,6 +112,7 @@ export interface UserDetails {
 }
 export interface UserProfile {
   bio?: string;
+  pronouns?: string;
 }
 
 export async function getUserDetailsRequest(userId?: string) {
@@ -199,6 +200,7 @@ interface UpdateUserOptions {
   password?: string;
   newPassword?: string;
   bio?: string | null;
+  pronouns?: string | null;
   socketId?: string;
   dmStatus?: number;
 }
