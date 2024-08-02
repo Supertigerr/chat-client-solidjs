@@ -259,12 +259,6 @@
     "banButton": "Ban",
     "banning": "Banning..."
   },
-  "messageContextMenu": {
-    "editMessage": "Edit Message",
-    "deleteMessage": "Delete Message",
-    "copyMessage": "Copy Message",
-    "copyId": "Copy ID"
-  },
   "profile": {
     "followButton": "Follow",
     "unfollowButton": "Unfollow",
@@ -304,5 +298,51 @@
     "attachments": "Attachments",
     "attachmentsBack": "Back",
     "members": "Members"
+  },
+  "chatWindow" : {
+    "oneIsTyping": "{{username}} is typing..",
+    "twoAreTyping": "{{username_1}} and {{username_2}} are typing..",
+    "threeAreTyping": "{{username_1}}, {{username_2}} and {{username_3}} are typing..",
+    "multipleAreTyping": "{{username1}}, {{username2}}, {{username3}} and {{number}} others are typing...",
+    "messagePlaceholder": "Send message",
+    "messageContextMenu": {
+      "editMessage": "Edit Message",
+      "deleteMessage": "Delete Message",
+      "copyMessage": "Copy Message",
+      "copyId": "Copy ID",
+      "quoteMessage": "Quote Message",
+      "reply": "Reply",
+      "viewReactions": "View Reactions"
+    },
+    "formatOptions": {
+      "bold": "Bold",
+      "italic": "Italic",
+      "underline": "Underline",
+      "strikethrough": "Strikethrough",
+      "namedLink": "Named Link",
+      "spoiler": "Spoiler",
+      "timestamp": "Timestamp",
+      "timestampModal": {
+        "title": "Add timestamp",
+        "done": "Done" 
+      },
+      "color": "Color",
+      "colorModal": {
+        "title": "Pick a color",
+        "done": "Done"
+      }
+    },
+    "emojiTab": {
+      "recentEmojis": "Recent Emojis",
+      "smileysAndEmotion": "Smileys & Emotion",
+      "peopleAndBody": "People & Body",
+      "animalsAndNature": "Animals & Nature",
+      "foodAndDrink": "Food & Drink",
+      "travelAndPlaces": "Travel & Places",
+      "activities": "Activities",
+      "objects": "Objects",
+      "symbols": "Symbols",
+      "flags": "Flags"
+    }
   }
 }

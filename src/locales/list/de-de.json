@@ -1,5 +1,6 @@
 {
   "header": {
+    "logoutButton": "Abmelden",
     "openAppButton": "App öffnen",
     "loginButton": "Anmelden",
     "joinNowButton": "Jetzt beitreten"
@@ -27,6 +28,16 @@
     "registerButton": "Registrieren",
     "registering": "Registrierung erfolgt...",
     "loginInstead": "Stattdessen anmelden"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "activeUsers": "Aktive Benutzer",
+    "noActiveUsers": "Keine aktiven Benutzer",
+    "servers": "Server",
+    "posts": "Beiträge",
+    "feed": "Feed",
+    "discover": "Entdecken",
+    "notifications": "Benachrichtigungen"
   },
   "inbox": {
     "drawer": {
@@ -71,7 +82,8 @@
         "publishServer": "Server veröffentlichen",
         "verify": "Verifizieren",
         "role": "Rolle",
-        "channel": "Kanale",
+        "welcome-screen": "Begrüßungsbildschirm",
+        "channel": "Kanal",
         "emojis": "Emojis",
         "notifications": "Benachrichtigungen"
       },
@@ -83,7 +95,7 @@
         "systemMessages": "Systemmeldungen",
         "systemMessagesDescription": "Hier werden Systembenachrichtigungen reingesendet.",
         "deleteThisServer": "Diesen Server löschen",
-        "deleteThisServerDescription": "Dies kann nicht Rückgängig gemacht werden!",
+        "deleteThisServerDescription": "Dies kann nicht rückgängig gemacht werden!",
         "deleteServerButton": "Server löschen",
         "saveChangesButton": "Änderungen speichern",
         "saving": "Speichern..."
@@ -125,9 +137,9 @@
       "invites": {
         "createInviteButton": "Einladung erstellen",
         "serverInvites": "Server Einladungen",
-        "serverInvitesDescription": "Laden deine Freunde auf diesen Server ein.",
+        "serverInvitesDescription": "Lade deine Freunde auf diesen Server ein.",
         "customInviteVerifiedOnlyNotice": "Benutzerdefinierte Einladungslinks sind nur für verifizierte Server verfügbar.",
-        "customLink": "Benutzerdefinierte Einladungslinks",
+        "customLink": "Benutzerdefinierter Einladungslink",
         "saveButton": "Speichern",
         "deleteButton": "Löschen",
         "copyLinkButton": "Link kopieren"
@@ -139,7 +151,7 @@
         "bumpServer": "Server boosten",
         "bumpServerDescription": "Booste den Server, um mehr Mitglieder zu bekommen.",
         "publishServerButton": "Server veröffentlichen",
-        "unpublishServerButton": "Server privatisieren"
+        "unpublishServerButton": "Serververöffentlichung aufheben"
       }
     },
     "rolePermissions": {
@@ -152,64 +164,102 @@
       "manageChannels": "Kanäle verwalten",
       "manageChannelsDescription": "Erlaubt die Verwaltung von Kanälen auf diesem Server.",
       "kick": "Kick",
-      "kickDescription": "Erlaubt es Benutzern vom Server zu kicken.",
+      "kickDescription": "Erlaubt es, Benutzer vom Server zu kicken.",
       "ban": "Ban",
-      "banDescription": "Erlaubt es Benutzern vom Server zu bannen."
+      "banDescription": "Erlaubt es, Benutzer vom Server zu bannen.",
+      "mentionEveryone": "Erwähne alle",
+      "mentionEveryoneDescription": "Erlaubt das Erwähnen von @everyone. Administratoren können immer noch alle erwähnen.",
+      "nicknameMember": "Mitgliedsnamen ändern",
+      "nicknameMemberDescription": "Erlaubt es, den Spitznamen von Mitgliedern im Server zu ändern."
     },
     "channelPermissions": {
       "privateChannel": "Privater Kanal",
       "privateChannelDescription": "Deaktiviere den Zugriff auf den Kanal. Administratoren können weiterhin auf den Kanal zugreifen.",
       "sendMessage": "Nachricht senden",
-      "sendMessageDescription": "Erlaubt das Senden von Nachrichten auf diesem Server. Administratoren können weiterhin Nachrichten senden."
+      "sendMessageDescription": "Erlaubt das Senden von Nachrichten auf diesem Server. Administratoren können weiterhin Nachrichten senden.",
+      "joinVoice": "Sprachkanal beitreten",
+      "joinVoiceDescription": "Erlaubt das Beitreten zu Sprachkanälen im Server. Administratoren können weiterhin Sprachkanälen beitreten."
     }
   },
   "settings": {
     "drawer": {
       "title": "Einstellungen",
-      "account": "Account",
+      "account": "Konto",
+      "interface": "Benutzeroberfläche",
       "language": "Sprache",
       "notifications": "Benachrichtigungen",
       "logout": "Abmelden",
+      "developer": "Entwickler",
+      "applications": "Anwendungen",
+      "experiments": "Experimente",
       "supportMe": "Unterstütze Mich",
       "viewSource": "Quellcode ansehen",
       "changelog": "Änderungsprotokoll",
       "window-settings": "Fenstereinstellungen",
-      "privacy": "Privatsphäre"
+      "call-settings": "Anrufeinstellungen",
+      "activity-status": "Aktivitätsstatus",
+      "tickets": "Tickets",
+      "privacy": "Datenschutz",
+      "connections": "Verknüpfungen"
+    },
+    "privacy": {
+      "directMessage": {
+        "title": "Direktnachrichten",
+        "description": "Festlegen, wer dir Direktnachrichten senden kann.",
+        "anyone": "Jeder",
+        "friendsAndServersOnly": "Nur Freunde und Server",
+        "friendsOnly": "Nur Freunde"
+      },
+      "profileOptions": {
+        "title": "Profiloptionen",
+        "hideFollowers": "Follower verbergen",
+        "hideFollowersDescription": "Verbirgt deine Follower auf deinem Profil.",
+        "hideFollowing": "Folgt verbergen",
+        "hideFollowingDescription": "Verbirgt Benutzer, denen du folgst, auf deinem Profil."
+      },
+      "friendRequest": {
+        "title": "Freundschaftsanfragen",
+        "description": "Festlegen, wer dir Freundschaftsanfragen senden kann.",
+        "anyone": "Jeder",
+        "serversOnly": "Nur Server",
+        "nobody": "Niemand"
+      },
+      "lastOnline": {
+        "description": "Festlegen, wer dein letzte zuletzt Online sehen kann.",
+        "title": "Zuletzt Online"
+      }
     }
   },
   "addFriend": {
-    "usernameAndTag": "Benutzername & Tag"
+    "title": "Freund hinzufügen",
+    "usernameAndTag": "Benutzername & Tag",
+    "sendRequest": "Anfrage senden"
   },
   "userContextMenu": {
-    "viewProfile": "Profil anzeigen",
+    "viewProfile": "Profil ansehen",
     "sendMessage": "Nachricht senden",
     "copyId": "ID kopieren",
     "editRoles": "Rollen bearbeiten",
     "kick": "Kick",
-    "ban": "Ban"
+    "ban": "Ban",
+    "changeNickname": "Spitznamen ändern"
   },
   "kickServerMemberModal": {
-    "title": "Kick {{username}}",
+    "title": "{{username}} kicken",
     "kickButton": "Kick",
-    "kicking": "Kicken...",
+    "kicking": "Kick...",
     "backButton": "Zurück",
-    "message": "Bist du sicher, dass du <1>{{username}}</1> kicken willst?"
+    "message": "Bist du sicher, dass du <1>{{username}}</1> kicken möchtest?"
   },
   "editServerRolesModal": {
-    "title": "Edit Roles"
+    "title": "Rollen bearbeiten"
   },
   "banModal": {
-    "title": "Ban {{username}}?",
-    "message": "Bist du sicher, dass du <1>{{username}}</1> bannen willst?",
-    "deletePastMessagesCheckbox": "Alle Nachrichten der letzten 7 Stunden löschen.",
+    "title": "{{username}} bannen?",
+    "message": "Bist du sicher, dass du <1>{{username}}</1> bannen möchtest?",
+    "deletePastMessagesCheckbox": "Nachrichten der letzten 7 Stunden löschen.",
     "banButton": "Ban",
     "banning": "Bannen..."
-  },
-  "messageContextMenu": {
-    "editMessage": "Nachricht bearbeiten",
-    "deleteMessage": "Nachricht löschen",
-    "copyMessage": "Nachricht kopieren",
-    "copyId": "ID kopieren"
   },
   "profile": {
     "followButton": "Folgen",
@@ -223,23 +273,78 @@
     "mutualServers": "Gemeinsame Server ({{count}})",
     "postsTab": "Beiträge",
     "followersTab": "Follower",
-    "followingTab": "Folgt",
+    "followingTab": "Folge ich",
     "postsAndRepliesTab": "Beiträge und Antworten ({{count}})",
-    "likedPostsTab": "Gelikete Beiträge ({{count}})"
+    "likedPostsTab": "Gelikte Beiträge ({{count}})"
   },
   "posts": {
     "deletePostModal": {
-      "message": "Bist du sicher, dass du diesen Beitrag löschen möchtest?",
+      "message": "Möchtest du diesen Beitrag wirklich löschen?",
       "cancelButton": "Abbrechen",
       "deleteButton": "Löschen"
     },
     "postWasDeleted": "Dieser Beitrag wurde gelöscht!",
-    "someoneLikedYourPost": "<1>{{username}}</1> gelällt dein Beitrag!",
-    "someoneFollowedYou": "<1>{{username}}</1> ist dir gefolgt!",
+    "someoneLikedYourPost": "<1>{{username}}</1> hat deinen Beitrag gelikt!",
+    "someoneFollowedYou": "<1>{{username}}</1> folgt dir jetzt!",
     "someoneRepliedToPost": "<1>{{username}}</1> hat auf deinen Beitrag geantwortet!",
     "createAPostInputPlaceholder": "Einen Beitrag erstellen...",
     "replyInputPlaceholder": "Antworten...",
     "replyButton": "Antworten",
-    "createButton": "Erstellen"
+    "createButton": "Erstellen",
+    "pollOptions": "Umfrageoptionen",
+    "optionNumberPlaceholder": "Option {{number}}"
+  },
+  "informationDrawer": {
+    "title": "Informationen",
+    "channelNotice": "Kanalhinweis",
+    "attachments": "Anhänge",
+    "attachmentsBack": "Zurück",
+    "members": "Mitglieder"
+  },
+  "chatWindow" : {
+    "oneIsTyping": "{{username}} schreibt..",
+    "twoAreTyping": "{{username_1}} und {{username_2}} schreiben..",
+    "threeAreTyping": "{{username_1}}, {{username_2}} und {{username_3}} schreiben..",
+    "multipleAreTyping": "{{username1}}, {{username2}}, {{username3}} und {{number}} weitere schreiben..",
+    "messagePlaceholder": "Nachricht senden",
+    "messageContextMenu": {
+      "editMessage": "Nachricht bearbeiten",
+      "deleteMessage": "Nachricht löschen",
+      "copyMessage": "Nachricht kopieren",
+      "copyId": "ID kopieren",
+      "quoteMessage": "Nachricht zitieren",
+      "reply": "Antworten",
+      "viewReactions": "Reaktionen ansehen"
+    },
+    "formatOptions": {
+      "bold": "Fett",
+      "italic": "Kursiv",
+      "underline": "Unterstrichen",
+      "strikethrough": "Durchgestrichen",
+      "namedLink": "Hyperlink",
+      "spoiler": "Spoiler",
+      "timestamp": "Zeitstempel",
+      "timestampModal": {
+        "title": "Zeitstempel einfügen",
+        "done": "Fertig" 
+      },
+      "color": "Farbe",
+      "colorModal": {
+        "title": "Farbe auswählen",
+        "done": "Fertig"
+      }
+    },
+    "emojiTab": {
+      "recentEmojis": "Zuletzt verwendet",
+      "smileysAndEmotion": "Smileys & Emotionen",
+      "peopleAndBody": "Menschen & Körper",
+      "animalsAndNature": "Tiere & Natur",
+      "foodAndDrink": "Essen & Trinken",
+      "travelAndPlaces": "Reisen & Orte",
+      "activities": "Aktivitäten",
+      "objects": "Objekte",
+      "symbols": "Symbole",
+      "flags": "Flaggen"
+    }
   }
 }
